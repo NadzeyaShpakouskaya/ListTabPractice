@@ -11,30 +11,22 @@ struct DetailedContactInfoView: View {
     let contact: Contact
     
     var body: some View {
-        List {
+        VStack {
             Image(systemName: "person")
                 .resizable()
-                .foregroundColor(.gray)
                 .frame(width: 125, height: 125, alignment: .center)
+                .foregroundColor(.indigo)
             
-         
-                HStack{
-                    Image(systemName: "envelope")
-                    Text(contact.email)
-                }
-                HStack{
-                    Image(systemName: "phone")
-                    Text(contact.phone)
-                }
-                
+            ContactPersonalInfoView(contact: contact)
+                .listStyle(.plain)
+            
         }.navigationTitle(contact.fullName)
-         
-        
+
     }
 }
 
 struct DetailedContactInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailedContactInfoView(contact: Contact.generateContact())
+        DetailedContactInfoView(contact: DataManager().generateContact())
     }
 }

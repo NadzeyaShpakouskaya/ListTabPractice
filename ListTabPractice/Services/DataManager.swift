@@ -19,4 +19,9 @@ class DataManager: ObservableObject {
         objectWillChange.send(self)
         return contactList
     }
+    
+    func generateContact() -> Contact {
+        objectWillChange.send(self)
+        return Contact.generateContact()
+    }
 }

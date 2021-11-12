@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct ContactsListView: View {
+    
     let contacts: [Contact]
     
     var body: some View {
-        VStack{
+        NavigationView {
             List(contacts) { contact in
                 NavigationLink(contact.fullName) {
                     DetailedContactInfoView(contact: contact)
                 }
             }
+            .navigationTitle("Contact List")
         }
-        .navigationTitle("Contacts List")
-        
-        
     }
 }
 

@@ -16,6 +16,7 @@
 		FDC5257E273E23B8005FCB37 /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5257D273E23B8005FCB37 /* ContactsListView.swift */; };
 		FDC52580273E23C6005FCB37 /* NumbersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC5257F273E23C6005FCB37 /* NumbersListView.swift */; };
 		FDC52582273E2C11005FCB37 /* DetailedContactInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC52581273E2C11005FCB37 /* DetailedContactInfoView.swift */; };
+		FDC52584273E9722005FCB37 /* ContactPersonalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC52583273E9722005FCB37 /* ContactPersonalInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		FDC5257D273E23B8005FCB37 /* ContactsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
 		FDC5257F273E23C6005FCB37 /* NumbersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersListView.swift; sourceTree = "<group>"; };
 		FDC52581273E2C11005FCB37 /* DetailedContactInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedContactInfoView.swift; sourceTree = "<group>"; };
+		FDC52583273E9722005FCB37 /* ContactPersonalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPersonalInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				FDC5256B273E2147005FCB37 /* ListTabPracticeApp.swift */,
-				FDC5256D273E2147005FCB37 /* ContentView.swift */,
-				FDC5257D273E23B8005FCB37 /* ContactsListView.swift */,
-				FDC5257F273E23C6005FCB37 /* NumbersListView.swift */,
-				FDC52581273E2C11005FCB37 /* DetailedContactInfoView.swift */,
-				FDC52579273E2183005FCB37 /* Contact.swift */,
-				FDC5257B273E21B5005FCB37 /* DataManager.swift */,
+				FDC52587273E9BEF005FCB37 /* Views */,
+				FDC52585273E9BD8005FCB37 /* Models */,
+				FDC52586273E9BE3005FCB37 /* Services */,
 				FDC5256F273E214B005FCB37 /* Assets.xcassets */,
 				FDC52571273E214B005FCB37 /* Preview Content */,
 			);
@@ -80,6 +79,50 @@
 				FDC52572273E214B005FCB37 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FDC52585273E9BD8005FCB37 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FDC52579273E2183005FCB37 /* Contact.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FDC52586273E9BE3005FCB37 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FDC5257B273E21B5005FCB37 /* DataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FDC52587273E9BEF005FCB37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDC5256D273E2147005FCB37 /* ContentView.swift */,
+				FDC52588273E9C03005FCB37 /* ContactListViews */,
+				FDC52589273E9C2B005FCB37 /* NumbersListViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FDC52588273E9C03005FCB37 /* ContactListViews */ = {
+			isa = PBXGroup;
+			children = (
+				FDC5257D273E23B8005FCB37 /* ContactsListView.swift */,
+				FDC52581273E2C11005FCB37 /* DetailedContactInfoView.swift */,
+				FDC52583273E9722005FCB37 /* ContactPersonalInfoView.swift */,
+			);
+			path = ContactListViews;
+			sourceTree = "<group>";
+		};
+		FDC52589273E9C2B005FCB37 /* NumbersListViews */ = {
+			isa = PBXGroup;
+			children = (
+				FDC5257F273E23C6005FCB37 /* NumbersListView.swift */,
+			);
+			path = NumbersListViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +202,7 @@
 				FDC52580273E23C6005FCB37 /* NumbersListView.swift in Sources */,
 				FDC5257E273E23B8005FCB37 /* ContactsListView.swift in Sources */,
 				FDC5256C273E2147005FCB37 /* ListTabPracticeApp.swift in Sources */,
+				FDC52584273E9722005FCB37 /* ContactPersonalInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
