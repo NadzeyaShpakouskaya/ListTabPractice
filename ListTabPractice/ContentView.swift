@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var dataManager: DataManager
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView{
+            TabView {
+                ContactsListView(contacts: dataManager.fetchData())
+                    .tabItem {
+                        Image(systemName: "person.3")
+                        Text("Contacts")
+                    }
+                NumbersListView(contacts: dataManager.fetchData())
+                    .tabItem {
+                        Image(systemName: "phone.fill")
+                        Text("Numbers")
+                    }
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(DataManager())
     }
 }
