@@ -11,7 +11,20 @@ struct NumbersListView: View {
     let contacts: [Contact]
     
     var body: some View {
-        Text("Numbers")
+        List {
+            ForEach(contacts) { contact in
+                Section(contact.fullName) {
+                    HStack{
+                        Image(systemName: "envelope")
+                        Text(contact.email)
+                    }
+                    HStack{
+                        Image(systemName: "phone")
+                        Text(contact.phone)
+                    }
+                }
+            }
+        }.navigationTitle("Contacts List")
     }
 }
 

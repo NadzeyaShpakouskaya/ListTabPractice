@@ -11,15 +11,16 @@ struct ContactsListView: View {
     let contacts: [Contact]
     
     var body: some View {
-    
+        VStack{
             List(contacts) { contact in
                 NavigationLink(contact.fullName) {
                     DetailedContactInfoView(contact: contact)
                 }
-            
-            }.listStyle(.plain)
-            .navigationTitle("Contacts")
-     
+            }
+        }
+        .navigationTitle("Contacts List")
+        
+        
     }
 }
 

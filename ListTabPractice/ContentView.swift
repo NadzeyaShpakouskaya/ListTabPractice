@@ -11,20 +11,25 @@ struct ContentView: View {
     
     @EnvironmentObject var dataManager: DataManager
     
+    @State private var contacts: [Contact]  =  []
+    
+    
     var body: some View {
         NavigationView{
             TabView {
-                ContactsListView(contacts: dataManager.fetchData())
+                ContactsListView(contacts: contacts)
                     .tabItem {
                         Image(systemName: "person.3")
                         Text("Contacts")
                     }
-                NumbersListView(contacts: dataManager.fetchData())
+                NumbersListView(contacts: contacts)
                     .tabItem {
                         Image(systemName: "phone.fill")
                         Text("Numbers")
                     }
             }
+        }.onAppear {
+            contacts = dataManager.fetchData()
         }
     }
 }
