@@ -25,6 +25,6 @@ struct ContactsListView: View {
 
 struct ContactsListView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactsListView(contacts: DataManager().fetchData())
+        ContactsListView(contacts: Contact.generateContacts())
     }
 }

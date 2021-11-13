@@ -10,11 +10,9 @@ import SwiftUI
 @main
 struct ListTabPracticeApp: App {
     
-    @StateObject private var dataManager = DataManager()
-    
     var body: some Scene {
         WindowGroup {
-            ContentView(contacts: dataManager.fetchData())
+            ContentView(contacts: Contact.generateContacts())
         }
     }
 }

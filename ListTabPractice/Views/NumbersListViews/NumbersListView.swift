@@ -12,18 +12,10 @@ struct NumbersListView: View {
     
     var body: some View {
         NavigationView{
-            List {
-                ForEach(contacts) {
-                    contact in Section(contact.fullName) {
-                        HStack{
-                            Image(systemName: "envelope")
-                            Text(contact.email)
-                        }
-                        HStack{
-                            Image(systemName: "phone")
-                            Text(contact.phone)
-                        }
-                    }
+            List(contacts) {
+                contact in Section(contact.fullName) {
+                    Label(contact.email, systemImage: "envelope")
+                    Label(contact.phone, systemImage: "phone")
                 }
             }.navigationTitle("Full Contact List")
         }
@@ -33,6 +25,6 @@ struct NumbersListView: View {
 
 struct NumbersListView_Previews: PreviewProvider {
     static var previews: some View {
-        NumbersListView(contacts: DataManager().fetchData())
+        NumbersListView(contacts: Contact.generateContacts())
     }
 }

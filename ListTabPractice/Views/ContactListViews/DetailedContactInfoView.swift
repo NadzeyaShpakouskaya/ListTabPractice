@@ -27,6 +27,6 @@ struct DetailedContactInfoView: View {
 
 struct DetailedContactInfoView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailedContactInfoView(contact: DataManager().generateContact())
+        DetailedContactInfoView(contact: Contact.generateContact())
     }
 }

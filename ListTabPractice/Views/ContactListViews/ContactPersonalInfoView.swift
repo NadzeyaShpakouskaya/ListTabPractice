@@ -13,24 +13,18 @@ struct ContactPersonalInfoView: View {
     
     var body: some View {
         List{
-            HStack{
-                Image(systemName: "envelope")
-                    .foregroundColor(.indigo)
-                Text(contact.email)
-            }
-            HStack{
-                Image(systemName: "phone")
-                    .foregroundColor(.indigo)
-                Text(contact.phone)
-            }
+            Label(contact.email, systemImage: "envelope")
+            Label(contact.phone, systemImage: "phone")
         }
     }
+    
+ 
 }
 
 struct ContactPersonalInfoView_Previews: PreviewProvider {
     static var previews: some View {
         
-        ContactPersonalInfoView(contact: DataManager().generateContact())
+        ContactPersonalInfoView(contact: Contact.generateContact())
         
     }
 }
